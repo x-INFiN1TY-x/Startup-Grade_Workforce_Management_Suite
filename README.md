@@ -1,5 +1,7 @@
 # Medium Enterprise-Grade Workforce Management Suite
 
+**Tech Stack Used:** *Node.js, React.js, MySQL, Express.js, Express Handlebars, Bootstrap CSS, JavaScript, Multer, jszip, Winston*
+
 ## Getting Started - Cloning the Repository
 
 To begin using our Medium Enterprise-Grade Workforce Management Suite, follow these steps to clone the repository to your local environment:
