@@ -1,0 +1,19 @@
+
+<div  style="background-image: url('/background-faqs.jpg');">
+
+{{!-- Check if alert variable is defined --}}
+{{#if alert}}
+  <div class="card-pf-form alert alert-success alert-dismissible fade show" role="alert">
+    {{alert}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+{{/if}}
+
+{{!-- Iterate over each row --}}
+{{#each rows}}
+<form class="form needs-validation card-pf-form" method="POST" action="/edituser/{{this.id}}" enctype="multipart/form-data" style="background-image:url('/4880206.jpg'); background-size: 70%;
+    background-repeat: round;" novalidate> 
+  {{> user-form}}
+</form>
+{{/each}}
+</div>

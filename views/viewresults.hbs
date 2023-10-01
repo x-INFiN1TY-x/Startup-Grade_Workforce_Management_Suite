@@ -1,0 +1,64 @@
+<!-- Check if the removedUser variable is defined -->
+<div style="background-image: url('/background-faqs.jpg');">
+  {{#if removedUser}}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      User has been removed.
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
+  {{/if}}
+  <div style="padding-bottom: 50%;padding-top: 3%;">
+    <table
+      class="table card-pf"
+      style="background-image: url('/background-faqs.jpg'); background-size: 100%; 
+    background-repeat: round;"
+    >
+      <thead class="thead-dark">
+        <tr>
+
+          <th scope="col"><center>Name</center></th>
+          <th scope="col"><center>Organization</center></th>
+          <th scope="col"><center>Email-ID</center></th>
+          <th scope="col"><center>Phone</center></th>
+          <th scope="col" class="text-end"><center>Operations</center></th>
+        </tr>
+      </thead>
+      <tbody>
+        {{! Iterate over each row in the 'rows' array }}
+        {{#each rows}}
+          <tr>
+
+            <td>{{this.first_name}}</td>
+            <td>{{this.last_name}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.phone}}</td>
+            <td class="text-end">
+              <button
+                onclick="location.href='/viewuser/{{this.id}}'"
+                type="button"
+                class="btnn btnn-shine-1 btn btn-sm"
+              ><i class="bi bi-eye"></i> View</button>
+
+              <button
+                onclick="location.href='/edituser/{{this.id}}'"
+                type="button"
+                class="btnn btnn-shine-2 btn btn-sm"
+              ><i class="bi bi-pencil"></i> Alter</button>
+
+              <button
+                onclick="location.href='/{{this.id}}'"
+                type="button"
+                class="btnn btnn-shine-3 btn-sm btn"
+              ><i class="bi bi-person-x"></i> Remove</button>
+
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>

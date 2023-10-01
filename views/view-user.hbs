@@ -1,0 +1,49 @@
+<div class="view-user p-5">
+  {{! Iterate over each row }}
+  {{#each rows}}
+    <div class="row mb-5">
+      <div class="col text-center">
+        <h3>{{this.first_name}}</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Organization</th>
+              <th scope="col">Email-ID</th>
+              <th scope="col">Phone</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">{{this.first_name}}</th>
+              <td>{{this.last_name}}</td>
+              <td>{{this.email}}</td>
+              <td>{{this.phone}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div
+        class="container btn card-pf"
+        style="background-image: url('/background-faqs.jpg');"
+      >
+
+        <div class="row">
+          <div class="col">
+            <b>Remarks</b>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            {{this.comments}}
+          </div>
+        </div>
+      </div>
+
+    </div>
+  {{/each}}
+</div>

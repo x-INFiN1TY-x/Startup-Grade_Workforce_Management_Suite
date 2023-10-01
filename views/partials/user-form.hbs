@@ -1,0 +1,129 @@
+<!-- HTML code for a centered table form -->
+
+<center>
+  <table class="tablee">
+    <!-- Name field -->
+    <tr class="table-left">
+      <td>
+        <div class="">
+          <div class="form-floating mb-3 mt-3">
+            <input
+              type="text"
+              class="form__input form-control"
+              id="floatingInput"
+              value="{{this.first_name}}"
+              placeholder="First Name"
+              name="first_name"
+            />
+            <label for="floatingInput">First Name</label>
+          </div>
+        </div>
+      </td>
+    </tr>
+
+    <!--Company field -->
+    <tr>
+      <td>
+        <div class="">
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form__input form-control"
+              id="floatingInput"
+              value="{{this.last_name}}"
+              placeholder="Last Name"
+              name="last_name"
+            />
+            <label for="floatingInput">Organization</label>
+          </div>
+        </div>
+      </td>
+    </tr>
+
+    <!-- Email field -->
+    <tr>
+      <td>
+        <div>
+          <div class="form-floating mb-3">
+            <input
+              type="email"
+              class="form__input form-control"
+              id="floatingInput"
+              value="{{this.email}}"
+              placeholder="email@email.com"
+              name="email"
+            />
+            <label for="floatingInput">Email</label>
+          </div>
+        </div>
+      </td>
+    </tr>
+
+    <!-- Phone field -->
+    <tr>
+      <td>
+        <div class="">
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form__input form-control"
+              id="floatingInput"
+              value="{{this.phone}}"
+              placeholder="Phone"
+              name="phone"
+            />
+            <label for="floatingInput">Phone</label>
+          </div>
+        </div>
+      </td>
+    </tr>
+
+    <!-- File upload field -->
+    <tr>
+      <td colspan="1">
+        <div class="">
+          <div class="form-control mb-3">
+            <input
+              type="file"
+              class="form__input form-control"
+              id="file"
+              name="file"
+              multiple
+            />
+            <label>Upload Files</label>
+          </div>
+        </div>
+      </td>
+    </tr>
+
+    <!-- Comments field -->
+    <tr>
+      <td colspan="1">
+        <div class="">
+          <div class="form-floating mb-3">
+            <textarea
+              class="form__input form-control"
+              placeholder="Leave a comment here"
+              id="comments"
+              name="comments"
+              style="height: 10%"
+            >{{this.comments}}</textarea>
+            <label for="comments">Remarks</label>
+          </div>
+        </div>
+      </td>
+    </tr>
+
+    <!-- Submit button -->
+    <tr>
+      <td colspan="2">
+        <center class="mb-3">
+          <button
+            class="btn btnn btnn-shine btn-lg"
+            type="submit"
+          >Submit</button>
+        </center>
+      </td>
+    </tr>
+  </table>
+</center>

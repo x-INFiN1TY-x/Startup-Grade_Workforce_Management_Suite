@@ -1,0 +1,26 @@
+
+<div  style="background-image: url('/background-faqs.jpg');">
+{{#if alert}}
+<div class="card-pf-form alert alert-success alert-dismissible fade show" role="alert">
+  {{alert}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}
+<form class="form needs-validation card-pf-form" method="POST" action="/adduser" style="background-image:url('/4880206.jpg'); background-size: 70%;
+    background-repeat: round;" enctype="multipart/form-data" novalidate>
+  {{> user-form}}
+  
+</form>
+
+<div class="container">
+<form class="form card-pf-form btnn-shine" method="POST" action="/uploadyaml" enctype="multipart/form-data">
+   <div >
+    <label for="yamlFile">Register using YAML Files:</label>
+    <input type="file" class="btnn btn card-pf"
+               id="yamlFile" name="yamlFile" accept=".yaml, .yml">
+    </div>
+    <button type="submit" class="btn-sm btnn btnn-shine-1">Upload</button>
+    
+  </form>
+</div>
+</div>

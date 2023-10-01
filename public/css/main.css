@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i');
+
+body {
+  font-size: .875rem;
+  font-family: "Nunito", sans-serif;
+  background-image: url("/public/background-faqs.jpg");
+
+}
+
+
+.card-pf {
+  margin: auto;
+  padding: auto;
+  max-width: max-content;
+  width: auto;
+  min-width: 85%;
+  border-radius: 1.5rem;
+  box-shadow: 0.8rem 0.8rem 1.4rem #878787cc, -0.2rem -0.2rem 1.8rem #c9c9c97c;
+  background-size: 100%;
+  background-repeat: round;
+  justify-content: space-between;
+  background-image: url("background-faqs.jpg");
+
+}
+
+.card-pf-form {
+  margin: auto;
+  padding: auto;
+  max-width: max-content;
+  width: auto;
+  min-width: min-content;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  text-align: center;
+  border-radius: 3rem;
+  box-shadow: 0.7rem 0.7rem 1.3rem #989898cc, -0.1rem -0.1rem 1.7rem #d6d6d6da;
+  background-size: 100%;
+  background-repeat: round;
+  justify-content: space-between;
+
+  background-image: url("/public/background-faqs.jpg");
+
+}
+
+.feather {
+  width: 16px;
+  height: 16px;
+}
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  /* rtl:raw:
+  right: 0;
+  */
+  bottom: 0;
+  /* rtl:remove */
+  left: 0;
+  z-index: 100;
+  /* Behind the navbar */
+  padding: 48px 0 0;
+  /* Height of navbar */
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+@media (max-width: 767.98px) {
+  .sidebar {
+    top: 5rem;
+  }
+}
+
+.sidebar-sticky {
+  height: calc(100vh - 48px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* Scrollable contents if viewport is shorter than content. */
+}
+
+.sidebar .nav-link {
+  font-weight: 500;
+  color: #333;
+}
+
+.sidebar .nav-link .feather {
+  margin-right: 4px;
+  color: #727272;
+}
+
+.sidebar .nav-link.active {
+  color: #2470dc;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+  color: inherit;
+}
+
+.sidebar-heading {
+  font-size: .75rem;
+}
+
+/*
+ * Navbar
+ */
+
+.navbar-brand {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  background-color: rgba(0, 0, 0, .25);
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+}
+
+.navbar .navbar-toggler {
+  top: .25rem;
+  right: 1rem;
+}
+
+.navbar .form-control {
+  padding: .75rem 1rem;
+}
+
+.navbar .form-control::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1;
+  /* Firefox */
+}
+
+.form-control-dark {
+  color: #fff;
+  background-color: rgba(255, 255, 255, .1);
+  border-color: rgba(255, 255, 255, .1);
+}
+
+.form-control-dark:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
+
+.btnn {
+  font-size: small;
+  border: none;
+  width: auto;
+  letter-spacing: 1.5px;
+
+  border-radius: 12px;
+  color: #fff;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.4);
+}
+
+
+.form {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+  max-width: max-content;
+  width: auto;
+}
+
+.form__input {
+  max-width: 100%;
+  min-height: 50%;
+  height: min-content;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.3rem;
+  padding-left: 1.4rem;
+  align-items: center;
+  align-self: center;
+  padding: 5%;
+  box-shadow: 0.1rem 0.1rem 0.3rem #c4d3fd,
+    -0.1rem -0.1rem 0.3rem #dad5fb;
+  background-color: rgb(255, 255, 255)247, 247);
+  font-family: 'Times New Roman', Times, serif;
+  color: #9baacf;
+}
+
+.form__input::placeholder {
+  color: #bec8e4;
+}
+
+.form__input:focus {
+  outline: none;
+  box-shadow: inset 0.2rem 0.2rem 0.5rem #c8d0e7,
+    inset -0.2rem -0.2rem 0.5rem #FFFFFF;
+}
+
+.btnn:focus,
+.btnn:focus::after {
+  outline: none;
+}
+
+.btnn:active {
+  transform: translateY(2px);
+}
+
+.btnn-shine {
+  padding: 15px 75px;
+  align-content: center;
+  align-self: center;
+  background-image: linear-gradient(to right, #17133a, #322c6c, #2e2e49);
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+
+.btnn-shine::after {
+  background: #fff;
+  content: "";
+  height: 100%;
+  width: 160%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  transition: all 2.5s cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: -1;
+  opacity: 0;
+  transform: rotate(35deg);
+}
+
+.btnn-shine span {
+  z-index: 20;
+}
+
+
+.btnn-shine:hover::after {
+  width: 100%;
+  /* Move to the left end */
+  opacity: 0.5;
+  /* Adjust the opacity as desired */
+}
+
+.btnn-shine:hover {
+  color: #FFD700;
+  transform: translateY(2px);
+}
+
+.btnn-shine-1 {
+  padding: 10px 20px;
+  background-image: linear-gradient(120deg, #616ddb 0%, #4a87f7 100%);
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+  color: #ffffff;
+  transition: color 0.3s ease-in-out;
+}
+
+
+
+.btnn-shine-1::after {
+  background: #0e0d0d;
+  content: "";
+  height: 100%;
+  width: 160%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: -1;
+  opacity: 0;
+  transform: rotate(35deg);
+}
+
+.btnn-shine-1 span {
+  z-index: 20;
+}
+
+.btnn-shine-1:hover::after {
+  width: 100%;
+  opacity: 0.5;
+}
+
+.btnn-shine-1:hover {
+  color: #FFD700;
+  transform: translateY(2px);
+}
+
+.btnn-shine-2 {
+  padding: 10px 20px;
+  background-image: linear-gradient(-225deg, #ffd978 0%, #eb9269 48%, #ff6262 100%);
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+  color: #000000;
+  transition: color 0.3s ease-in-out;
+}
+
+.btnn-shine-2::after {
+  background: #000000;
+  content: "";
+  height: 100%;
+  width: 160%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: -1;
+  opacity: 0;
+  transform: rotate(35deg);
+}
+
+.btnn-shine-2 span {
+  z-index: 20;
+}
+
+.btnn-shine-2:hover::after {
+  width: 100%;
+  opacity: 0.5;
+}
+
+.btnn-shine-2:hover {
+  color: #FFD700;
+  transform: translateY(2px);
+}
+
+.btnn-shine-3 {
+  padding: 10px 20px;
+
+  background-image: linear-gradient(120deg, #8e0e00, #1f1c18 100%);
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.btnn-shine-3::after {
+  background: #090909;
+  content: "";
+  height: 100%;
+  width: 160%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: -1;
+  opacity: 0;
+  transform: rotate(35deg);
+}
+
+.btnn-shine-3 span {
+  z-index: 20;
+}
+
+.btnn-shine-3:hover::after {
+  width: 100%;
+  opacity: 0.5;
+}
+
+.btnn-shine-3:hover {
+  color: #FFD700;
+  transform: translateY(2px);
+}
+
+.tablee {
+  box-sizing: border-box;
+  padding: 15%;
+  max-width: max-content;
+  min-width: min-content;
+  width: auto;
+
+  margin: 5%;
+  margin-top: auto;
+}
+
+/* CSS styles for the "learn-more" button */
+
+/* General styles for buttons */
+button,
+button:active,
+button:focus,
+button:disabled {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+/* Styles for the "learn-more" button */
+.learn-more {
+  width: 12rem;
+  height: auto;
+}
+
+.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+}
+
+.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+
+.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Hover styles for the "learn-more" button */
+.learn-more:hover .circle {
+  width: 100%;
+}
+
+.learn-more:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+
+.learn-more:hover .button-text {
+  color: #fff;
+}
+
+.navbar .btnn {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .nav-link.active {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}

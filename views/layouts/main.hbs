@@ -1,0 +1,136 @@
+<!-- The HTML code for the main layout template -->
+
+<html lang="en">
+
+  <head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CYRAN AI User Management</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/cropped-cyran_logo_small-2.png" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icons CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <!-- Brand logo -->
+        <a
+          class="navbar-brand btnn col-md-4 col-lg-3 me-0 px-3 fs-6"
+          href="/"
+        >CYRAN AI User Management Portal</a>
+
+        <!-- Navbar toggle button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav">
+            <!-- Dashboard link -->
+            <li class="nav-item">
+              <a
+                class="nav-link .bg-light text-white btnn btn active"
+                aria-current="page"
+                href="/"
+              >Dashboard</a>
+            </li>
+
+            <!-- Add User link -->
+            <li class="nav-item">
+              <a
+                href="/adduser"
+                type="button"
+                name="adduser"
+                class="btn align-self-center btnn nav-link active"
+                style="color:rgb(0, 255, 247);"
+              >Add User</a>
+            </li>
+
+            <!-- Import Database link -->
+            <li class="nav-item">
+              <a
+                href="/bulkimports"
+                type="button"
+                name="bulkimports"
+                class="btn align-self-center btnn nav-link active"
+                style="color:rgba(0, 255, 0, 0.942);"
+              >Import Database</a>
+            </li>
+
+            <!-- Edit Database link -->
+            <li class="nav-item">
+              <a
+                href="/Editdatabase"
+                type="button"
+                class="btn align-self-center btnn nav-link active"
+                style="color:rgb(255, 255, 0);"
+              >Manage Database</a>
+            </li>
+          </ul>
+
+          <!-- Search Form -->
+          <form
+            class="nav col-md-auto d-flex mb-2 mb-md-0"
+            role="search"
+            method="POST"
+            action="/"
+          >
+            <input
+              type="search"
+              name="search"
+              class="btnn form-control form-control-dark"
+              style="max-width: 200px;"
+              placeholder="Search..."
+              aria-label="Search"
+            />
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div>
+      <!-- Placeholder for rendering the view content -->
+      {{{body}}}
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+
+</html>

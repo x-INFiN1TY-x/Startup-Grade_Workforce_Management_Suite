@@ -1,0 +1,50 @@
+<!-- Check if the removedUser variable is defined -->
+<div style="background-image: url('/background-faqs.jpg');">
+  {{#if removedUser}}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      Organization has been removed.
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
+  {{/if}}
+  <div style="padding-bottom: 5%;padding-top: 3%;">
+    <table
+      class="table card-pf-form"
+      style="background-image: url('/background-faqs.jpg'); background-size: 200%; 
+    background-repeat: round;"
+    >
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col" style="padding-left: 9%;">Organization</th>
+          <th scope="col" class="text-end"><center>Operations</center></th>
+        </tr>
+      </thead>
+      <tbody>
+        {{! Iterate over each row in the 'rows' array }}
+        {{#each rows}}
+          <tr>
+            <td>{{this.last_name}}</td>
+            <td class="text-end">
+              <button
+                onclick="location.href='/vieworg/{{this.last_name}}'"
+                type="button"
+                class="btnn btnn-shine-1 btn btn-sm"
+              ><i class="bi bi-eye"></i> View</button>
+
+              <button
+                onclick="location.href='/del/{{this.last_name}}'"
+                type="button"
+                class="btnn btnn-shine-3 btn-sm btn"
+              ><i class="bi bi-person-x"></i> Remove</button>
+
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>

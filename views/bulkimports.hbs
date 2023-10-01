@@ -1,0 +1,58 @@
+<div
+  style="background-image: url('/background-faqs.jpg');border-bottom-style: none;padding-bottom: 23%;padding-top: 5%;"
+>
+
+  {{#if alert}}
+    <div
+      class="card-pf-form alert alert-success alert-dismissible fade show"
+      role="alert"
+    >
+      {{alert}}
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
+  {{/if}}
+  <form
+    class="form needs-validation card-pf-form"
+    method="POST"
+    action="/bulkimports"
+    style="background-image:url('/4880206.jpg'); background-size: 70%;
+    background-repeat: round;"
+    enctype="multipart/form-data"
+    novalidate
+  >
+    <table class="tablee">
+      <tr>
+        <td>
+
+          <center class="mb-3">
+            <label for="companyFolder">Upload Database Folder:</label>
+            <input
+              type="file"
+              class="form-control"
+              id="companyFolder"
+              name="companyFolder"
+            />
+          </center>
+        </td>
+      </tr>
+
+      <!-- Submit button -->
+
+      <tr>
+        <td colspan="2">
+          <center class="mb-3">
+            <button
+              class="btn btnn btnn-shine btn-lg"
+              type="submit"
+            >Submit</button>
+          </center>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
