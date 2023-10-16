@@ -1,0 +1,984 @@
+/* Importing fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i');
+
+/* Removing background image from the login-pf class to prevent clashes with body background */
+.login-pf {
+    background: none;
+}
+
+/* Styling the body within login-pf class */
+.login-pf body {
+    font-family: "Nunito", sans-serif;
+    text-transform: uppercase;
+    height: 100%;
+    background-image: url("../img/background-faqs.jpg");
+}
+
+/* Keyframes animation for gradient effect */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Adjusting height of textarea in pf-c-form-control class */
+textarea.pf-c-form-control {
+    height: auto;
+}
+
+/* Styling the title within pf-c-alert__title class */
+.pf-c-alert__title {
+    font-size: var(--pf-global--FontSize--xs);
+}
+
+/* Styling instruction paragraphs with class instruction */
+p.instruction {
+    margin: 5px 0;
+}
+
+/* Styling button with class pf-c-button and pf-m-control */
+.pf-c-button.pf-m-control {
+    border: solid var(--pf-global--BorderWidth--sm);
+    border-color: rgba(230, 230, 230, 0.5);
+}
+
+/* Styling h1 element with ID kc-page-title */
+h1#kc-page-title {
+    margin-top: 10px;
+}
+
+/* Styling unordered list within element with ID kc-locale */
+#kc-locale ul {
+    background-color: var(--pf-global--BackgroundColor--100);
+    display: none;
+    top: 20px;
+    min-width: 100px;
+    padding: 0;
+}
+
+/* Styling dropdown element with ID kc-locale-dropdown */
+#kc-locale-dropdown {
+    display: inline-block;
+}
+
+/* Showing the dropdown list on hover */
+#kc-locale-dropdown:hover ul {
+    display: block;
+}
+
+/* Styling anchor links within kc-locale-dropdown */
+#kc-locale-dropdown a {
+    color: var(--pf-global--Color--200);
+    text-align: right;
+    font-size: var(--pf-global--FontSize--sm);
+}
+
+/* Adding an arrow icon after the current locale link */
+a#kc-current-locale-link::after {
+    content: "\2c5";
+    margin-left: var(--pf-global--spacer--xs);
+}
+
+/* Styling container within login-pf class */
+.login-pf .container {
+    padding-top: 40px;
+}
+
+/* Changing link color on hover */
+.login-pf a:hover {
+    color: #0099d3;
+}
+
+/* Styling logo with ID kc-logo */
+#kc-logo {
+    width: 100%;
+}
+
+/* Styling logo text within div with class kc-logo-text */
+div.kc-logo-text {
+    background-image: url(../img/keycloak-logo-text.png);
+    background-repeat: no-repeat;
+    height: 63px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+/* Hiding span elements within kc-logo-text */
+div.kc-logo-text span {
+    display: none;
+}
+
+/* Styling header with ID kc-header */
+#kc-header {
+    color: #ededed;
+    overflow: visible;
+    white-space: nowrap;
+}
+
+/* Styling header wrapper with ID kc-header-wrapper */
+#kc-header-wrapper {
+    font-size: 29px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 1.2em;
+    padding: 62px 10px 20px;
+    white-space: normal;
+}
+
+/* Styling content with ID kc-content */
+#kc-content {
+    width: 100%;
+}
+
+/* Styling attempted username with ID kc-attempted-username */
+#kc-attempted-username {
+    font-size: 20px;
+    font-family: inherit;
+    font-weight: normal;
+    padding-right: 10px;
+}
+
+/* Styling username element with ID kc-username */
+#kc-username {
+    text-align: center;
+    margin-bottom: -10px;
+}
+
+/* Styling webauthn settings form with ID kc-webauthn-settings-form */
+#kc-webauthn-settings-form {
+    padding-top: 8px;
+}
+
+/* Disabling pointer events for select-auth-box-parent within kc-form-webauthn */
+#kc-form-webauthn .select-auth-box-parent {
+    pointer-events: none;
+}
+
+/* Styling the description box within kc-form-webauthn */
+#kc-form-webauthn .select-auth-box-desc {
+    color: var(--pf-global--palette--black-600);
+}
+
+/* Styling the headline within kc-form-webauthn */
+#kc-form-webauthn .select-auth-box-headline {
+    color: var(--pf-global--Color--300);
+}
+
+/* Styling the icon box within kc-form-webauthn */
+#kc-form-webauthn .select-auth-box-icon {
+    flex: 0 0 3em;
+}
+
+/* Styling the properties of the icon box within kc-form-webauthn */
+#kc-form-webauthn .select-auth-box-icon-properties {
+    margin-top: 10px;
+    font-size: 1.8em;
+}
+
+/* Styling the properties of the icon box with unknown transport class within kc-form-webauthn */
+#kc-form-webauthn .select-auth-box-icon-properties.unknown-transport-class {
+    margin-top: 3px;
+}
+
+/* Styling the stack item within kc-form-webauthn */
+#kc-form-webauthn .pf-l-stack__item {
+    margin: -1px 0;
+}
+
+/* Styling the content wrapper within kc */
+#kc-content-wrapper {
+    margin-top: 20px;
+}
+
+/* Styling the form wrapper within kc */
+#kc-form-wrapper {
+    margin-top: 10px;
+}
+
+/* Styling the information box within kc */
+#kc-info {
+    margin: 20px -40px -30px;
+    border-radius: 1rem;
+    box-shadow: 0 0 .8rem #c8d0e7, 0 0 1.4rem #FFFFFF;
+    display: flex;
+    /* Styling the background gradient of the information box */
+    background: linear-gradient(-45deg, #d2f3df, #d8f0e8, #e0dffa, #e6daff, #ffefff);
+    background-size: 400% 400%;
+    animation: gradient 3s ease-out infinite;
+    align-items: center;
+}
+
+/* Styling the information box wrapper within kc */
+#kc-info-wrapper {
+    font-size: 13px;
+    padding: 15px 35px;
+    background-color: transparent;
+}
+
+/* Styling span elements within kc-form-options */
+#kc-form-options span {
+    display: block;
+}
+
+/* Styling checkbox within kc-form-options */
+#kc-form-options .checkbox {
+    margin-top: 0;
+    color: #72767b;
+}
+
+/* Styling the terms text within kc */
+#kc-terms-text {
+    margin-bottom: 20px;
+}
+
+/* Styling the registration within kc */
+#kc-registration {
+    margin-bottom: 0;
+}
+
+/* Styling the subtitle class */
+.subtitle {
+    text-align: right;
+    margin-top: 30px;
+    color: #909090;
+}
+
+/* Styling the required class */
+.required {
+    color: var(--pf-global--danger-color--200);
+}
+
+/* Styling the ordered list with ID kc-totp-settings */
+ol#kc-totp-settings {
+    margin: 0;
+    padding-left: 20px;
+}
+
+/* Styling the unordered list with ID kc-totp-supported-apps */
+ul#kc-totp-supported-apps {
+    margin-bottom: 10px;
+}
+
+/* Styling the QR code within kc-totp-secret-qr-code */
+#kc-totp-secret-qr-code {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+/* Styling the secret key within kc-totp-secret-key */
+#kc-totp-secret-key {
+    background-color: #fff;
+    color: #333333;
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+/* Styling headers within kc-oauth */
+#kc-oauth h3 {
+    margin-top: 0;
+}
+
+/* Styling unordered list within kc-oauth */
+#kc-oauth ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Styling list items within kc-oauth ul */
+#kc-oauth ul li {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 12px;
+    padding: 10px 0;
+}
+
+/* Styling the first list item within kc-oauth ul */
+#kc-oauth ul li:first-of-type {
+    border-top: 0;
+}
+
+/* Styling the kc-role class within kc-oauth */
+#kc-oauth .kc-role {
+    display: inline-block;
+    width: 50%;
+}
+
+/* Styling textarea within kc-code */
+#kc-code textarea {
+    width: 100%;
+    height: 8em;
+}
+
+/* Styling kc-social-links */
+.kc-social-links {
+    margin-top: 20px;
+}
+
+/* Styling kc-social-provider-logo */
+.kc-social-provider-logo {
+    font-size: 23px;
+    width: 30px;
+    height: 25px;
+    float: left;
+}
+
+/* Styling kc-social-gray */
+.kc-social-gray {
+    color: var(--pf-global--Color--200);
+}
+
+/* Styling kc-social-item */
+.kc-social-item {
+    margin-bottom: var(--pf-global--spacer--sm);
+    font-size: 15px;
+    text-align: center;
+}
+
+/* Styling kc-social-provider-name */
+.kc-social-provider-name {
+    position: relative;
+    top: 3px;
+}
+
+/* Styling kc-social-icon-text */
+.kc-social-icon-text {
+    left: -15px;
+}
+
+/* Styling kc-social-grid */
+.kc-social-grid {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+    grid-column-end: span 6;
+    --pf-l-grid__item--GridColumnEnd: span 6;
+}
+
+/* Styling kc-social-icon-text within kc-social-grid */
+.kc-social-grid .kc-social-icon-text {
+    left: -10px;
+}
+
+/* Styling kc-login-tooltip */
+.kc-login-tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* Styling kc-social-section */
+.kc-social-section {
+    text-align: center;
+}
+
+/* Styling hr within kc-social-section */
+.kc-social-section hr {
+    margin-bottom: 10px
+}
+
+/* Styling kc-tooltip-text within kc-login-tooltip */
+.kc-login-tooltip .kc-tooltip-text {
+    top: -3px;
+    left: 160%;
+    background-color: black;
+    visibility: hidden;
+    color: #fff;
+    min-width: 130px;
+    text-align: center;
+    border-radius: 2px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+    padding: 5px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+/* Show tooltip on hover */
+.kc-login-tooltip:hover .kc-tooltip-text {
+    visibility: visible;
+    opacity: 0.7;
+}
+
+/* Arrow for tooltip */
+.kc-login-tooltip .kc-tooltip-text::after {
+    content: " ";
+    position: absolute;
+    top: 15px;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+    /* Arrow pointing to the tooltip */
+}
+
+@media (min-width: 768px) {
+
+    /* Styles for screens with a minimum width of 768px */
+    #kc-container-wrapper {
+        position: absolute;
+        width: 100%;
+    }
+
+    .login-pf .container {
+        padding-right: 80px;
+    }
+
+    #kc-locale {
+        position: relative;
+        text-align: right;
+        z-index: 9999;
+    }
+}
+
+@media (max-width: 767px) {
+
+    /* Styles for screens with a maximum width of 767px */
+    .login-pf body {
+        background: white;
+    }
+
+    #kc-header {
+        padding-left: 15px;
+        padding-right: 15px;
+        float: none;
+        text-align: left;
+    }
+
+    #kc-header-wrapper {
+        font-size: 16px;
+        font-weight: bold;
+        padding: 20px 60px 0 0;
+        color: #72767b;
+        letter-spacing: 0;
+    }
+
+    div.kc-logo-text {
+        margin: 0;
+        width: 150px;
+        height: 32px;
+        background-size: 100%;
+    }
+
+    #kc-form {
+        float: none;
+    }
+
+    #kc-info-wrapper {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        background-color: transparent;
+    }
+
+    .login-pf .container {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    #kc-locale {
+        position: absolute;
+        width: 200px;
+        top: 20px;
+        right: 20px;
+        text-align: right;
+        z-index: 9999;
+    }
+}
+
+@media (min-height: 646px) {
+
+    /* Styles for screens with a minimum height of 646px */
+    #kc-container-wrapper {
+        bottom: 12%;
+    }
+}
+
+@media (max-height: 645px) {
+
+    /* Styles for screens with a maximum height of 645px */
+    #kc-container-wrapper {
+        padding-top: 50px;
+        top: 20%;
+    }
+}
+
+.card-pf form.form-actions .btn {
+    float: right;
+    margin-left: 10px;
+    /* Positioning and styling for form buttons within a card */
+}
+
+#kc-form-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Styles for form buttons wrapper */
+}
+
+#kc-form-buttons button {
+    margin-left: auto;
+    margin-right: auto;
+    /* Styles for form buttons within the wrapper */
+}
+
+.login-pf-page .login-pf-brand {
+    margin-top: 20px;
+    max-width: 360px;
+    width: 40%;
+    /* Styles for branding element on the login page */
+}
+
+.select-auth-box-arrow {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    /* Styles for arrow in select authentication box */
+}
+
+.select-auth-box-icon {
+    display: flex;
+    flex: 0 0 2em;
+    justify-content: center;
+    margin-right: 1rem;
+    margin-left: 3rem;
+    /* Styles for icon in select authentication box */
+}
+
+.select-auth-box-parent {
+    border-top: 1px solid var(--pf-global--palette--black-200);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    cursor: pointer;
+    /* Styles for parent container in select authentication box */
+}
+
+.select-auth-box-parent:hover {
+    background-color: #f7f8f8;
+    /* Hover effect for parent container in select authentication box */
+}
+
+.select-auth-container {
+    padding-bottom: 0px !important;
+    /* Styles for container in select authentication box */
+}
+
+.select-auth-box-headline {
+    font-size: var(--pf-global--FontSize--md);
+    color: var(--pf-global--primary-color--100);
+    font-weight: bold;
+    /* Styles for headline in select authentication box */
+}
+
+.select-auth-box-desc {
+    font-size: var(--pf-global--FontSize--sm);
+    /* Styles for description in select authentication box */
+}
+
+.select-auth-box-paragraph {
+    text-align: center;
+    font-size: var(--pf-global--FontSize--md);
+    margin-bottom: 5px;
+    /* Styles for paragraph in select authentication box */
+}
+
+.card-pf {
+    margin: 0 auto;
+    padding: 0 1%;
+    max-width: max-content;
+    width: 30%;
+    min-width: 25%;
+    border-radius: 3rem;
+    box-shadow: 0.8rem 0.8rem 1.4rem #c5cbdb, -0.2rem -0.2rem 1.8rem #FFFFFF;
+    /* Background gradient for card and other styles */
+    background-image: url("../img/mk-s-iO1brzkAIfE-unsplash.jpg");
+    background-size: 100%;
+    background-repeat: round;
+    justify-content: space-between;
+
+}
+
+/*phone*/
+@media (max-width: 767px) {
+
+    /* Styles for screens with a maximum width of 767px */
+    .login-pf-page .card-pf {
+        max-width: max-content;
+        margin: auto;
+        padding: auto;
+    }
+
+    .kc-social-grid {
+        grid-column-end: 12;
+        --pf-l-grid__item--GridColumnEnd: span 12;
+    }
+
+    .kc-social-grid .kc-social-icon-text {
+        left: -15px;
+    }
+}
+
+.login-pf-page .login-pf-signup {
+    font-size: 15px;
+    color: #72767b;
+    /* Styles for signup element on the login page */
+}
+
+#kc-content-wrapper .row {
+    margin-left: 0;
+    margin-right: 0;
+    /* Styles for content rows */
+}
+
+.login-pf-page.login-pf-page-accounts {
+    margin-left: auto;
+    margin-right: auto;
+    /* Styles for login page accounts */
+}
+
+.login-pf-page .btn-primary {
+    margin-top: 0;
+    /* Styles for primary buttons on the login page */
+}
+
+.login-pf-page .list-view-pf .list-group-item {
+    border-bottom: 1px solid #ededed;
+    /* Styles for list view items */
+}
+
+.login-pf-page .list-view-pf-description {
+    width: 100%;
+    /* Styles for list view descriptions */
+}
+
+#kc-form-login div.form-group:last-of-type,
+#kc-register-form div.form-group:last-of-type,
+#kc-update-profile-form div.form-group:last-of-type,
+#kc-update-email-form div.form-group:last-of-type {
+    margin-bottom: 0px;
+    /* Styles for the last form group in various forms */
+}
+
+.no-bottom-margin {
+    margin-bottom: 0;
+    /* Styles for elements with no bottom margin */
+}
+
+#kc-back {
+    margin-top: 5px;
+    /* Styles for back element */
+}
+
+/* Recovery codes */
+.kc-recovery-codes-warning {
+    margin-bottom: 32px;
+    /* Styles for recovery codes warning */
+}
+
+.kc-recovery-codes-warning .pf-c-alert__description p {
+    font-size: 0.875rem;
+    /* Styles for recovery codes alert description */
+}
+
+.kc-recovery-codes-list {
+    list-style: none;
+    columns: 2;
+    margin: 16px 0;
+    padding: 16px 16px 8px 16px;
+    border: 1px solid #D2D2D2;
+    /* Styles for recovery codes list */
+}
+
+.kc-recovery-codes-list li {
+    margin-bottom: 8px;
+    font-size: 11px;
+    /* Styles for recovery codes list items */
+}
+
+.kc-recovery-codes-list li span {
+    color: #6A6E73;
+    width: 16px;
+    text-align: right;
+    display: inline-block;
+    margin-right: 1px;
+    /* Styles for recovery codes list item span */
+}
+
+.kc-recovery-codes-actions {
+    margin-bottom: 24px;
+    /* Styles for recovery codes actions */
+}
+
+.kc-recovery-codes-actions button {
+    padding-left: 0;
+    /* Styles for recovery codes action buttons */
+}
+
+.kc-recovery-codes-actions button i {
+    margin-right: 8px;
+    /* Styles for icons within recovery codes action buttons */
+}
+
+.kc-recovery-codes-confirmation {
+    align-items: baseline;
+    margin-bottom: 16px;
+    /* Styles for recovery codes confirmation */
+}
+
+/* End Recovery codes */
+
+.checkbox {
+    grid-template-columns: repeat(2, 6rem);
+    grid-gap: 3rem;
+    justify-content: center;
+    /* Styles for checkbox grid */
+}
+
+.checkbox input {
+    display: none;
+    /* Styles for checkbox input */
+}
+
+.checkbox label {
+    box-shadow: 0.3rem 0.3rem 0.6rem #c8d0e7, -0.2rem -0.2rem 0.5rem #c8d0e7;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    /* Styles for checkbox label */
+}
+
+.checkbox label:hover i {
+    color: #6d5dfc;
+    /* Hover effect for checkbox label icon */
+}
+
+.checkbox label i {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #9baacf;
+    transition: 0.3s ease;
+    /* Styles for checkbox label icon */
+}
+
+.checkbox input:checked~label {
+    box-shadow: inset 0.2rem 0.2rem 0.5rem #c8d0e7, inset -0.2rem -0.2rem 0.5rem #FFFFFF;
+    /* Styles for checked checkbox label */
+}
+
+.checkbox input:checked~label i {
+    color: #6d5dfc;
+    /* Styles for checked checkbox label icon */
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/* ALL BUTTONS */
+.btnn {
+    font-family: 'Poppins', sans-serif;
+    font-size: small;
+    border: none;
+    width: auto;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-radius: 12px;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.4);
+}
+
+.btnn:focus,
+.btnn:focus::after {
+    outline: none;
+}
+
+.btnn:active {
+    transform: translateY(2px);
+}
+
+.btnn-shine {
+    padding: 15px 75px;
+    background-image: linear-gradient(to right, #17133a, #322c6c, #2e2e49);
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+}
+
+.btnn-shine::after {
+    background: #fff;
+    content: "";
+    height: 100%;
+    width: 160%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    transition: all 2.5s cubic-bezier(0.19, 1, 0.22, 1);
+    z-index: -1;
+    opacity: 0;
+    transform: rotate(35deg);
+}
+
+.btnn-shine span {
+    z-index: 20;
+}
+
+
+.btnn-shine:hover::after {
+    width: 100%;
+    /* Move to the left end */
+    opacity: 0.5;
+    /* Adjust the opacity as desired */
+}
+
+.btnn-shine:hover {
+    color: #FFD700;
+    transform: translateY(2px);
+}
+
+.form {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+
+.form__input {
+    width: 100%;
+    height: 4rem;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+    padding-left: 1.4rem;
+    box-shadow: 0.3rem 0.3rem 0.6rem #c8d0e7,
+        -0.2rem -0.2rem 0.5rem #e3dfff;
+    background-color: aliceblue;
+    font-family: inherit;
+    color: #9baacf;
+}
+
+.form__input::placeholder {
+    color: #bec8e4;
+}
+
+.form__input:focus {
+    outline: none;
+    box-shadow: inset 0.2rem 0.2rem 0.5rem #c8d0e7,
+        inset -0.2rem -0.2rem 0.5rem #FFFFFF;
+}
+
+.signinsection {
+    text-align: center;
+    font-weight: 500;
+}
+
+.formsection {
+    align-content: center;
+    align-items: center;
+}
+
+.table-left {
+    width: min-content;
+    padding-right: 0%;
+    padding-top: 0%;
+    padding-left: 10%;
+}
+
+
+.table-right {
+    width: max-content;
+    padding: 15px;
+    padding-left: 0%;
+    padding-top: 2%;
+}
+
+table {
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+
+.table-forgot {
+    padding-top: 2%;
+    padding-bottom: 1%;
+}
+
+.chip {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    justify-self: center;
+    width: 17rem;
+    height: 4rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 .8rem #c8d0e7,
+        0 0 1.4rem #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chip__icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1rem;
+    margin: 0 0 0 .2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    color: #6d5dfc;
+}
+
+.chip p {
+    font-size: .9rem;
+    margin-left: -1.8rem;
+    color: #9baacf;
+}
+
+.chip__close {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin: 0 .5rem;
+    display: flex;
+    font-size: 1.6rem;
+    color: #bec8e4;
+    cursor: pointer;
+}
+
+
+.tableregtd {
+    padding-bottom: 3%;
+    width: max-content;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.tablereg {
+    padding: 4%;
+    align-self: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 1%;
+    margin-right: 3%;
+}

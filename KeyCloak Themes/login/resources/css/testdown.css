@@ -1,0 +1,235 @@
+/* Patternfly CSS places a "bg-login.jpg" as the background on this ".login-pf" class.
+   This clashes with the "keycloak-bg.png' background defined on the body below.
+   Therefore the Patternfly background must be set to none. */
+.login-pf {
+    background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login-pf .topmostclass {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.login-pf .signinsection {
+    margin-bottom: 20px;
+}
+
+.login-pf .formsection {
+    /* Styles for the form section */
+}
+
+
+.login-pf body {
+
+    background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+
+    align-content: center;
+    align-self: center;
+
+    background-size: cover;
+    height: 100%;
+}
+
+.login-pf-page {
+    height: 100%;
+}
+
+/* background-image: linear-gradient( 92.7deg,  rgba(245,212,212,1) 8.5%, rgba(252,251,224,1) 90.2% );
+background-color: #ffcad8;
+background-image: linear-gradient(90deg, #ffcad8 0%, #a7fffc 50%, #d7ffab 100%); */
+
+
+/* End Recovery codes */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/* ALL BUTTONS */
+.btnn {
+    font-family: 'Poppins', sans-serif;
+    font-size: small;
+    border: none;
+    width: auto;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-radius: 12px;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.4);
+}
+
+.btnn:focus,
+.btnn:focus::after {
+    outline: none;
+}
+
+.btnn:active {
+    transform: translateY(2px);
+}
+
+.btnn-shine {
+    padding: 15px 75px;
+    background-image: linear-gradient(to right, #41b488, #5db2ef);
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+}
+
+.btnn-shine::after {
+    background: #fff;
+    content: "";
+    height: 100%;
+    width: 160%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    transition: all 2.5s cubic-bezier(0.19, 1, 0.22, 1);
+    z-index: -1;
+    opacity: 0;
+    transform: rotate(35deg);
+}
+
+.btnn-shine span {
+    z-index: 20;
+}
+
+
+.btnn-shine:hover::after {
+    width: 100%;
+    /* Move to the left end */
+    opacity: 0.5;
+    /* Adjust the opacity as desired */
+}
+
+.btnn-shine:hover {
+    color: #000;
+    /* Change the text color to black on hover */
+    transform: translateY(2px);
+}
+
+.card-pf {
+    width: 40rem;
+    height: 80%;
+    border-radius: 3rem;
+    box-shadow: 0.8rem 0.8rem 1.4rem #c8d0e7,
+        -0.2rem -0.2rem 1.8rem #FFFFFF;
+    padding: 4rem;
+    margin: 0 auto;
+    /* Add this line */
+    display: grid;
+    align-self: center;
+    grid-template-columns: 17.6rem 19rem 20.4rem;
+    grid-template-rows: repeat(auto-fit, min-content);
+    grid-column-gap: 5rem;
+    grid-row-gap: 2.5rem;
+    background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
+}
+
+
+.topmostclass {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+
+@media screen and (min-width: 900px) {
+    .login-pf-page {
+        font-size: 75%;
+    }
+}
+
+
+
+div.kc-logo-text {
+    /* background-image: url(../img/keycloak-logo-text.png);
+    background-repeat: no-repeat; */
+    height: 63px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+div.kc-logo-text span {
+    display: none;
+}
+
+.checkbox {
+    grid-column: 1 / 2;
+    display: grid;
+    grid-template-columns: repeat(2, 6rem);
+    grid-gap: 3rem;
+    justify-content: center;
+}
+
+.checkbox input {
+    display: none;
+}
+
+.checkbox label {
+    box-shadow: 0.3rem 0.3rem 0.6rem #c8d0e7,
+        -0.2rem -0.2rem 0.5rem #FFFFFF;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    width: 2.8rem;
+    height: 2.8rem;
+}
+
+.checkbox label:hover i {
+    color: #6d5dfc;
+}
+
+.checkbox label i {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #9baacf;
+    transition: 0.3s ease;
+}
+
+.checkbox input:checked~label {
+    box-shadow: inset 0.2rem 0.2rem 0.5rem #c8d0e7,
+        inset -0.2rem -0.2rem 0.5rem #FFFFFF;
+}
+
+.checkbox input:checked~label i {
+    color: #6d5dfc;
+}
