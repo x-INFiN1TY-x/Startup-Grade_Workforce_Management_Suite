@@ -1,6 +1,15 @@
 # Workforce Management Suite
 
 **Tech Stack Used:** *Node.js, React.js, MySQL, Express.js, Express Handlebars, Bootstrap CSS, JavaScript, Multer, jszip, Winston*
+## Description
+This project is a secure and efficient suite for managing a Workforce Fraternity within a Startup-Grade Organization, Featuring:
+
+- **Secure User Authentication**: Implementing KeyCloak for secure user access control.
+- **Streamlined Registration**: Simplifying user onboarding through an admin dashboard.
+- **MySQL Integration**: Efficient data storage and management.
+- **Bulk User Import**: Admins can easily import users from ZIP folders with YAML files.
+- **Secure File Handling**: Safeguarding user data during ZIP extraction, YAML parsing, and database updates.
+- **Enhanced Auditability**: Improved event logging with Winston for system tracking and debugging.
 
 ## 1. Getting Started - Cloning the Repository
 
