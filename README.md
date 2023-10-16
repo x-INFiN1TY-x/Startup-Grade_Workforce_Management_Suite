@@ -1,4 +1,4 @@
-# Medium Enterprise-Grade Workforce Management Suite
+# Workforce Management Suite
 
 **Tech Stack Used:** *Node.js, React.js, MySQL, Express.js, Express Handlebars, Bootstrap CSS, JavaScript, Multer, jszip, Winston*
 
